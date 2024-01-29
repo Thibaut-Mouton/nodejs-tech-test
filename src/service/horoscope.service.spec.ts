@@ -19,7 +19,7 @@ describe(HoroscopeService.name, () => {
     it('Should return the correct zodiac sign', () => {
       const date = '2024-01-01';
       const result = horoscopeService.getZodiacSign(date);
-      expect(result).toBe('Capricorn');
+      expect(result).toBe('You are Capricorn.');
     });
   });
 });

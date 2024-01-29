@@ -13,6 +13,6 @@ export class HoroscopeService {
     const month = getMonth(receivedDate);
     const day = getDay(receivedDate);
     const sign = getSign({ month: month + 1, day });
-    return `Your are ${sign}.`;
+    return `You are ${sign}.`;
   }
 }
