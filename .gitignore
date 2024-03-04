@@ -1,7 +1,3 @@
-horoscope/node_modules
-horoscope/node_modules
-horoscope/.idea
-horoscope/dist
-command_line/node_modules
-command_line/.idea
-command_line/dist
+node_modules
+.idea
+dist
