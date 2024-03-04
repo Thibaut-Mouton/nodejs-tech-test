@@ -1,0 +1,14 @@
+{
+  "name": "command_line",
+  "version": "1.0.0",
+  "description": "Test exercise for Leroy Merlin",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --silent"
+  },
+  "author": "Thibaut MOUTON",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "29.7.0"
+  }
+}
