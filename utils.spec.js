@@ -1,4 +1,4 @@
-const {lintAndPrintResult, checkParams} = require("./utils");
+const {lintAndPrintResult, checkParams, extractNumberFromTemplateString} = require("./utils");
 
 describe('utils.js', () => {
 
@@ -34,4 +34,18 @@ describe('utils.js', () => {
             expect(console.log).toHaveBeenCalledTimes(3)
         });
     });
+
+    describe(extractNumberFromTemplateString.name, () => {
+        it('should not format the number', () => {
+            const result = extractNumberFromTemplateString('Australia')
+            expect(result).toBeNaN()
+        });
+
+        it('should format the number correctly', () => {
+            const str = 'Australia [10]'
+            const result = extractNumberFromTemplateString(str)
+            expect(typeof result).toBe('number')
+            expect(result).toEqual(10)
+        });
+    })
 });

@@ -10,7 +10,8 @@ function checkParams() {
  * @param str expected format : "xxxxx [5]"
  */
 function extractNumberFromTemplateString(str) {
-
+    const firstSplit = str.split(' ')[1]
+    return parseInt((firstSplit ?? '').replace('[', '').replace(']', ''), 10)
 }
 
 function lintAndPrintResult(response) {
@@ -27,6 +28,7 @@ function lintAndPrintResult(response) {
 module.exports = {
     FILTER_ARG,
     COUNT_ARG,
+    extractNumberFromTemplateString,
     checkParams,
     lintAndPrintResult
 }

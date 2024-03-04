@@ -1,5 +1,5 @@
 const {handleFilterArg, handleCountArg} = require("./app");
-const {lintAndPrintResult} = require("./utils");
+const {lintAndPrintResult, extractNumberFromTemplateString} = require("./utils");
 
 describe('app.js', () => {
     const mockTemplate = [
@@ -89,9 +89,8 @@ describe('app.js', () => {
     describe(handleCountArg.name, () => {
         it('should count entries', () => {
             const result = handleCountArg(mockTemplate)
-            console.log('RES', result[0].name)
-            expect(parseInt(result[0].name.split(' ')[1].replace('[', '').replace(']', ''), 10)).toEqual(mockTemplate[0].people.length)
-            expect(parseInt(result[0].people[0].name.split(' ')[1].replace('[', '').replace(']', ''), 10)).toEqual(mockTemplate[0].people[0].name)
+            expect(extractNumberFromTemplateString(result[0].name)).toEqual(mockTemplate[0].people.length)
+            expect(extractNumberFromTemplateString(result[0].people[0].name)).toEqual(mockTemplate[0].people[0].animals.length)
         });
     });
 });

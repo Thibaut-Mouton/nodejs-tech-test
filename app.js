@@ -63,10 +63,10 @@ function processArgsFromCmd() {
     switch (currentArg) {
         case FILTER_ARG:
             result = handleFilterArg(data)
-            return
+            break
         case COUNT_ARG:
             result = handleCountArg(data)
-            return
+            break
         default:
             console.error('Unexpected error. Unknown argument.')
             break
