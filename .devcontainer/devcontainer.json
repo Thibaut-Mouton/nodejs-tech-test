@@ -1,7 +1,7 @@
 {
   "name": "Main container",
   "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "main",
+  "service": "devcontainer",
   "shutdownAction": "none",
   "workspaceFolder": "/workspace"
 }
