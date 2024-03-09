@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: vue-frontend:1.00  # production image that I made for vue-frontend
+    container_name: vue-frontend
+    restart: always
+    ports:
+      - 8200:8080  # publish port 8080 (inside container) as 8200 on host
+
+  backend:
+    image: fastapi-backend:1.00  # production image that I made for fastapi-backend
+    container_name: fastapi-backend
+    restart: always
+    ports:
+      - 8000:8000  # publish port 8000 (inside container) as 8000 on host
+
+  elasticsearch:
+    container_name: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.0  # ready made ES docker image
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    ports:
+      - 9200:9200
