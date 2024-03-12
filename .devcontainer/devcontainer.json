@@ -1,7 +1,4 @@
 {
-  "name": "Main container",
-  "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "devcontainer",
-  "shutdownAction": "none",
-  "workspaceFolder": "/workspace"
+  "name": "idea-demo",
+  "image": "openjdk:11"
 }
