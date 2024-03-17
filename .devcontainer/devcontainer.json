@@ -1,7 +1,5 @@
 {
-  "name": "nodejs-container",
-  "dockerComposeFile": ["./../docker-compose.yml"],
-  "service": "back",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  service: "back",
   "shutdownAction": "none",
-  "workspaceFolder": "/workspace/back"
 }
