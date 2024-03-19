@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  nodejscontainer:
+  back:
     image: node:21-alpine3.18
     volumes:
       - ..:/workspaces:cached

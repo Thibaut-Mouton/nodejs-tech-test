@@ -1,5 +1,5 @@
 {
   "dockerComposeFile": ["../docker-compose.yml"],
-  service: "back",
+  "service": "back",
   "shutdownAction": "none",
 }
