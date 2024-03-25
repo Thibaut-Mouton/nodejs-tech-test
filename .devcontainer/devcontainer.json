@@ -1,4 +1,5 @@
 {
-  "name": "idea-demo",
-  "image": "openjdk:11"
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "back",
+  "shutdownAction": "none",
 }
