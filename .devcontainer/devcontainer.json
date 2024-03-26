@@ -9,6 +9,7 @@
   // The 'workspaceFolder' property is the path VS Code should open by default when
   // connected. Corresponds to a volume mount in .devcontainer/docker-compose.yml
   "workspaceFolder": "/workspace",
+  "forwardPorts": [8082],
 
   // Uncomment the next line if you want to keep your containers running after VS Code shuts down.
   // "shutdownAction": "none",
